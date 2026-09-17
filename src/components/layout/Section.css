@@ -1,0 +1,32 @@
+.section {
+  padding: var(--section-padding-y) 0;
+  position: relative;
+}
+
+.section--default {
+  background-color: var(--color-bg-white);
+}
+
+.section--gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-gradient-start) 0%,
+    var(--color-bg-gradient-mid) 50%,
+    var(--color-bg-gradient-end) 100%
+  );
+}
+
+.section--dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-white);
+}
+
+.section--light {
+  background-color: var(--color-bg-light);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+}

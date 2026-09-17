@@ -1,0 +1,232 @@
+.solution {
+  background-color: var(--color-bg-white);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.solution__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.solution__badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+}
+
+.solution__title {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: #0F172A;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.solution__subtitle {
+  font-size: 1.05rem;
+  color: #64748B;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Diagram Layout */
+.solution__diagram {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.solution__connectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.solution__center-hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.solution__hub-circle {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1E3A8A 0%, #0F172A 100%);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35), 0 0 30px rgba(56, 189, 248, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem;
+  border: 3px solid rgba(56, 189, 248, 0.6);
+  color: #FFFFFF;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.solution__hub-circle:hover {
+  transform: scale(1.04);
+}
+
+.solution__hub-circle::before {
+  content: '';
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 2px dashed rgba(56, 189, 248, 0.4);
+  animation: hubRotate 24s linear infinite;
+}
+
+@keyframes hubRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.solution__hub-brand {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #38BDF8;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(56, 189, 248, 0.4);
+}
+
+.solution__hub-divider {
+  width: 36px;
+  height: 2px;
+  background: linear-gradient(90deg, #38BDF8, transparent);
+  margin: 0.45rem 0;
+}
+
+.solution__hub-role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+}
+
+/* 4 cards grid around hub */
+.solution__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 22rem;
+  row-gap: 5.5rem;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.solution__col {
+  display: flex;
+  justify-content: center;
+}
+
+.solution__col--top-left,
+.solution__col--bottom-left {
+  justify-content: flex-end;
+}
+
+.solution__col--top-right,
+.solution__col--bottom-right {
+  justify-content: flex-start;
+}
+
+.solution__col .stakeholder-card {
+  max-width: 330px;
+}
+
+/* Core Values Banner */
+.solution__banner {
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-full);
+  padding: 1.15rem 2.25rem;
+  text-align: center;
+  background: linear-gradient(135deg, #F8FAFC 0%, #EDF2F7 100%);
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.solution__banner-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1E293B;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .solution__grid {
+    column-gap: 16rem;
+    row-gap: 4rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .solution__connectors {
+    display: none;
+  }
+
+  .solution__diagram {
+    flex-direction: column;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .solution__center-hub {
+    position: static;
+    transform: none;
+    margin: 1rem 0;
+  }
+
+  .solution__grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+    column-gap: 0;
+  }
+
+  .solution__col--top-left,
+  .solution__col--bottom-left,
+  .solution__col--top-right,
+  .solution__col--bottom-right {
+    justify-content: center;
+  }
+
+  .solution__col .stakeholder-card {
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 600px) {
+  .solution__title {
+    font-size: 1.6rem;
+  }
+
+  .solution__banner-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
