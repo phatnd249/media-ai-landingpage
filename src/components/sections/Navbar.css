@@ -148,3 +148,29 @@
     height: 36px;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .navbar--scrolled {
+    padding: 0.65rem 0;
+  }
+
+  .navbar__logos {
+    gap: 0.85rem;
+  }
+
+  .navbar__logo--vietfuture {
+    height: 26px;
+  }
+
+  .navbar__logo--lhu {
+    height: 28px;
+  }
+
+  .navbar__hamburger span {
+    width: 22px;
+  }
+}

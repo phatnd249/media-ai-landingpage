@@ -231,3 +231,38 @@
     font-size: 1.75rem;
   }
 }
+
+@media (max-width: 480px) {
+  .pre-footer {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .pre-footer__title {
+    font-size: 1.4rem;
+  }
+
+  .pre-footer__subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .pre-footer__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pre-footer__btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 4rem 0 2.5rem;
+  }
+
+  .footer__grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}

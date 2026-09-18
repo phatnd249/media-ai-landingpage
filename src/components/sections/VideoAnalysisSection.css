@@ -432,3 +432,57 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .video-analysis {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .video-analysis__card {
+    padding: 0.85rem;
+    border-radius: var(--radius-xl);
+  }
+
+  .video-analysis__title {
+    font-size: 1.15rem;
+  }
+
+  .video-player__viewport {
+    aspect-ratio: 16 / 10;
+  }
+
+  .video-marker {
+    padding: 0.3rem;
+  }
+
+  .video-marker__text {
+    display: none;
+  }
+
+  .video-player__controls {
+    padding: 0.7rem 0.85rem;
+  }
+
+  .telemetry-panel {
+    padding: 0.85rem;
+  }
+
+  .waves-chart {
+    height: 110px;
+  }
+
+  .gauge-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gauge-number {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .video-player__right-controls {
+    display: none;
+  }
+}

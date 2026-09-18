@@ -4,3 +4,15 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
+
+@media (max-width: 480px) {
+  .container {
+    --container-padding: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    --container-padding: 0.75rem;
+  }
+}

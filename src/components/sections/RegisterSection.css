@@ -164,3 +164,33 @@
     padding: 2rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .register {
+    padding: 5rem 0 5.5rem;
+  }
+
+  .register__title {
+    font-size: 1.7rem;
+  }
+
+  .register__container {
+    gap: 2rem;
+  }
+
+  .register__card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .register__form {
+    gap: 1.25rem;
+  }
+
+  .register__input {
+    height: 50px;
+  }
+
+  .register__submit-btn {
+    height: 50px;
+  }
+}
